@@ -10,7 +10,7 @@
 
 **A beautiful photo gallery and timeline celebrating Pun & Mun's journey together** ❤️
 
-[🌐 Live Demo](https://love-poule.minhnn.fr) • [📖 Documentation](#documentation) • [🚀 Quick Start](#quick-start)
+• [🌐 Live Demo](https://love-poule.minhnn.fr) •
 
 </div>
 
