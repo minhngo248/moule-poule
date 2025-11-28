@@ -52,7 +52,7 @@ const CountDay = () => {
         <br />
         <br />
         <p className="description">
-          Hí hí nhanh ha. Vậy là gần 2 năm mình iu nhau rùi hí hí. Chúc Bun sinh nhật thật
+          Hí hí nhanh ha. Vậy là gần 4 năm mình iu nhau rùi hí hí. Chúc Bun sinh nhật thật
           vui vẻ, hạnh phúc, và luôn bên Mun nhớ &lt;3 chụttt
         </p>
       </div>

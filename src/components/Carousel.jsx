@@ -11,17 +11,17 @@ const Carousel = () => {
 
   const slides = [
     {
-      image: 'https://love-site.s3.eu-west-3.amazonaws.com/normal/IMG_9662.jpg',
+      image: 'https://love-site.s3.eu-west-3.amazonaws.com/normal2025/IMG_1052.jpg',
       title: 'MA BUNNN',
       subtitle: 'Chụttt'
     },
     {
-      image: 'https://love-site.s3.eu-west-3.amazonaws.com/porto/IMG_1056.jpg',
+      image: 'https://love-site.s3.eu-west-3.amazonaws.com/switzerland2025/DSCF0406.JPG',
       title: 'HÍIIIII',
       subtitle: 'Tụt'
     },
     {
-      image: 'https://love-site.s3.eu-west-3.amazonaws.com/porto/IMG_0945.jpg',
+      image: 'https://love-site.s3.eu-west-3.amazonaws.com/porto2023/IMG_0945.jpg',
       title: 'TRÒN TRON',
       subtitle: 'Em là Bou mặt tròn, tròn tron trón tron'
     }

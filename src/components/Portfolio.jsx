@@ -1,6 +1,17 @@
 import { useEffect } from 'react';
 import { portfolioData } from '../data/portfolioData';
 
+// Filter configuration
+const filters = [
+  { id: 'normal2025', label: 'Ảnh thường ngày', dataFilter: '.normal2025', isDefault: true },
+  { id: 'rotterdam2025', label: 'Rotterdam 25', dataFilter: '.rotterdam2025', isDefault: false },
+  { id: 'switzerland2025', label: 'Switzerland 25', dataFilter: '.switzerland2025', isDefault: false },
+  { id: 'avray2025', label: 'Avray 25', dataFilter: '.avray2025', isDefault: false },
+  { id: 'azur2025', label: 'Azur 25', dataFilter: '.azur2025', isDefault: false },
+  { id: 'heheimg2025', label: 'Hí hí', dataFilter: '.heheimg2025', isDefault: false },
+  { id: 'archived', label: 'Archived', dataFilter: '.archived', isDefault: false }
+];
+
 const Portfolio = () => {
   useEffect(() => {
     // Initialize Isotope
@@ -24,8 +35,11 @@ const Portfolio = () => {
         return false;
       });
 
-      // Click "All" by default
-      window.$('#all').click();
+      // Activate default filter
+      const defaultFilter = filters.find(f => f.isDefault);
+      if (defaultFilter) {
+        window.$(`#${defaultFilter.id}`).click();
+      }
     }
 
     // Initialize Fancybox
@@ -48,41 +62,18 @@ const Portfolio = () => {
       <div className="portfolio">
         <div id="filters" className="sixteen columns">
           <ul className="clearfix">
-            <li>
-              <a id="all" href="#" data-filter="*" className="active">
-                <h5>All</h5>
-              </a>
-            </li>
-            <li>
-              <a id="first-active" className="" href="#" data-filter=".normal">
-                <h5>Ảnh thường ngày</h5>
-              </a>
-            </li>
-            <li>
-              <a className="" href="#" data-filter=".porto">
-                <h5>Porto 23</h5>
-              </a>
-            </li>
-            <li>
-              <a className="" href="#" data-filter=".geneve">
-                <h5>Genève 23</h5>
-              </a>
-            </li>
-            <li>
-              <a className="" href="#" data-filter=".azur">
-                <h5>Côte d'Azur 22</h5>
-              </a>
-            </li>
-            <li>
-              <a className="" href="#" data-filter=".normandie">
-                <h5>Normandie 22</h5>
-              </a>
-            </li>
-            <li>
-              <a className="" href="#" data-filter=".heheimg">
-                <h5>Hí hí</h5>
-              </a>
-            </li>
+            {filters.map((filter) => (
+              <li key={filter.id}>
+                <a
+                  id={filter.id}
+                  href="#"
+                  data-filter={filter.dataFilter}
+                  className={filter.isDefault ? 'active' : ''}
+                >
+                  <h5>{filter.label}</h5>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -102,7 +93,7 @@ const Portfolio = () => {
                 width: '337px',
                 opacity: 1
               }}
-              className={`portfolio-item one-four ${item.category} isotope-item effect-oscar`}
+              className={`portfolio-item one-four ${item.category} ${item.archived ? 'archived' : ''} isotope-item effect-oscar`}
             >
               <a href={item.image} className="fancybox" title={`${item.title} ${item.subtitle}`}>
                 <div className="portfolio_img">
