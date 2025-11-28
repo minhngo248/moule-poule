@@ -22,9 +22,10 @@ jobs:
       - name: Get version and validate format
         id: version
         run: |
+          # Validate version format (x.x.x or x.x.x-SNAPSHOT)
           VERSION=$(node -p "require('./package.json').version")
-          if [[ ! $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "Error: Version $VERSION is not in x.x.x format"
+          if [[ ! $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+(-SNAPSHOT)?$ ]]; then
+            echo "Error: Version '$VERSION' does not match pattern x.x.x or x.x.x-SNAPSHOT"
             exit 1
           fi
 

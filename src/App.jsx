@@ -6,7 +6,7 @@ import AboutUs from './components/AboutUs';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import Footer from './components/Footer';
-import BirthdayPopup from './components/BirthdayPopup';
+import ValentinePopup from './components/ValentinePopup';
 import './App.css';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <BirthdayPopup />
+      <ValentinePopup />
       <Carousel />
       <Header />
       <CountDay />

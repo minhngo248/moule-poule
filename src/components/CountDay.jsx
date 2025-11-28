@@ -52,8 +52,8 @@ const CountDay = () => {
         <br />
         <br />
         <p className="description">
-          Hí hí nhanh ha. Vậy là gần 4 năm mình iu nhau rùi hí hí. Chúc Bun sinh nhật thật
-          vui vẻ, hạnh phúc, và luôn bên Mun nhớ &lt;3 chụttt
+          Hế lu Pou xưn, chắc giờ Pou xưn đang ngụ rùi. Công túa ngụ trên giường, hé :v Chúc Pou xưn Valentine
+          vui vẻ, hạnh phúc bên các Tou nhớ, rùi 2 tuần nứa về với Mou nè hé &lt;3 chụttt
         </p>
       </div>
     </section>
